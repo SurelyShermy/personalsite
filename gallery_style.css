@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    background-color:#222b2b;
+
+}
+
+
+
+
+.grid{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+.img-wrap{
+    position: relative;
+    overflow: hidden;
+}
+.img-wrap > img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+.img-wrap > .description{
+    position: absolute;
+    inset: 0;
+    font-size: 1.5qrem;
+    padding: 1rem;
+    background-color: rgba(255,255,255,.4);
+    display: flex;
+    justify-content: center;
+}
+.img-wrap > img
+.img-wrap > .content{
+    transition: 200ms ease-in-out;
+}
+.img-wrap:hover > img.blur{
+    filter: blur(1px);
+}
+.img-wrap:hover > img.zoom{
+    transform: scale(1.05);
+}
+.img-wrap > .description.fade{
+    opacity: 0;
+}
+.img-wrap:hover > .description.fade{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;  
+  }
+  .nav{
+      flex: 1;
+      text-align: right;
+  }
+  .navigation_links{
+      flex: 1;
+      text-align: right;
+  }
+  .navigation_links ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+  }
+  .navigation_links ul li a{
+      color: #fff;
+      font-size: 30px;
+      text-decoration: none;
+      background-image:
+      linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0, 0)),
+      linear-gradient(#ff7777, #ff7777);
+      background-size: 100% 2px, 0 2px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size .1s linear;
+  }
+  
+  .navigation_links ul li a:hover{
+      background-size: 0 2px, 100% 2px;
+  }
+  
+  .navigation_links ul li a:hover{
+      background-size: 0 2px, 100% 2px;
+  }
+  
